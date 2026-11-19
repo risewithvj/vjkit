@@ -1,0 +1,11 @@
+{
+  "version": "0.1.0",
+  "files": {
+    "shared/css/cookie-consent.css": "sha384-JG7C4EGryFV/vdwjeLLPU3rJ2bRcWrFubvyBI7JjRO1O3BbHHuos4eeZEl3UYgzz",
+    "shared/css/copy-code.css": "sha384-094OxvomQD/jKFIgFnwJVVJtsjDSYIU8l9V8cPnLa/+bxZcMvR2vVV61VO5o9Ltz",
+    "shared/css/toc.css": "sha384-cPG7NUetDr99fdJ6Pcij3LYbMqWZ44CyUennOhDurxNDYb5SbS7/cs05ulpvymg3",
+    "shared/js/cookie-consent.js": "sha384-Th6EaNWirUzFuWAnhpSeLcPTBHFermqUPHXvoZhEJ1xi+v9QXqSOS//MHKb4RfD/",
+    "shared/js/copy-code.js": "sha384-oYZixYy9OhmJ98Dx+NVX92U4TJBHwkugzBkG2Puwh3v6pMZcxylYa6I21E6b/cRl",
+    "shared/js/toc.js": "sha384-wFkmYCUNDXOEE4BASFSuF9Ce08OhI88Oz0SF7uyM+rQdPwhswR3fTkDF7dGc7dZ4"
+  }
+}

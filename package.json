@@ -1,0 +1,15 @@
+{
+  "name": "vjkit",
+  "version": "0.1.0",
+  "description": "Shared, dependency-free scripts and styles for Vijaya Kumar L (RisewithVJ) websites, served via jsDelivr.",
+  "license": "MIT",
+  "author": "Vijaya Kumar L (RisewithVJ) <https://www.linkedin.com/in/vijayakumarl/>",
+  "repository": { "type": "git", "url": "git+https://github.com/risewithvj/vjkit.git" },
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test",
+    "sri": "node tools/sri.mjs"
+  },
+  "devDependencies": { "jsdom": "^24.0.0" }
+}
