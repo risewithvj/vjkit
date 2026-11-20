@@ -1,4 +1,6 @@
-# VL Tech Official
+# VL Tech Official site assets
 
-Site-specific scripts and styles for https://vltechofficialblog.blogspot.com (the Blogger theme XML is kept private, not in this repo).
-Files for the new design are added here in later phases.
+Files served to https://vltechofficialblog.blogspot.com from tag `v1.0.0`.
+See the root `README.md` for the file list, the security notes and how to release a new version.
+
+Designed and developed by Vijaya Kumar L (RisewithVJ).

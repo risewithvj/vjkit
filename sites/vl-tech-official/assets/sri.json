@@ -1,0 +1,16 @@
+{
+  "css/vt-bookmarks.min.css": "sha384-tun0vKEzXy9bfOvpIHmeBLQ4RpIcei8ljNFX/FgwZ7BbcLrLpvv9SeVSLlniTvOJ",
+  "css/vt-cookie-consent.min.css": "sha384-l+/iW9gndrFmM2/aJBrvP7B+eP2Tyqsrg8+ZeD2V/a1VyPv2T7WFL/9xHVgCmGr4",
+  "css/vt-theme-color.min.css": "sha384-7Z/NyJcqaKI8gywpIme768lZ7l2Dx570VFqTbeONLplaq9HGdKL4PWI6/95e1Ojc",
+  "css/vt-toc.min.css": "sha384-+123INNpDLjNSTyMM6+6CTWfXGwv8Pjc7D65cJJ/KDIM1JyRjcIktlqVhB065iOL",
+  "fonts/inter-latin-400-normal.woff2": "sha384-tqh0FAOjwwo8QcrfmptsbU/OH9394dupGj2d2zJQ7lFJdE5ouzRr13+2JlwV7vrE",
+  "fonts/inter-latin-700-normal.woff2": "sha384-NGcYd/FCvDHllHDMcTSfVMPboX0S7euHIaQdNCSO2Bz/MkHMbUyYg7dtiwvrEX1E",
+  "fonts/jetbrains-mono-latin-400-normal.woff2": "sha384-/4dCc3INKaFZBsZMku6bd44i8Gr1uXW1GYvdcNjsbHXHh2nGnk9G4RAhHf8hx3GT",
+  "fonts/space-grotesk-latin-700-normal.woff2": "sha384-dzNBpK7RDu9924/vftG9SLd0DYqA0R0++LY8OV8n2QiTkmPXhBEeVd9d1ARQGnmX",
+  "js/vt-auto-chapters.min.js": "sha384-zgngqI9UMSyPYDu8ADUKaG451DD1P2i79T0piFByH0DHPL0TE4fJDFtPFrNLoabu",
+  "js/vt-bookmarks.min.js": "sha384-//BRY4FiMqDcXF8wwOOECWC4Aav14OeydqUzOWipnsLA7g5BnSx4ajiFTM47ny2Z",
+  "js/vt-cookie-consent.min.js": "sha384-VNSszvk27jB42N5ksEXAK5E6+JdqclvOApFko38at3P0wmwpo490aOaTIu8mYrHk",
+  "js/vt-copy-pre.min.js": "sha384-G6ZxX9DwJzvRCioUgUC+mdxUBMtCNF/K0GlZGexOrXQg8/J7u19t0Xs3FODRWnyP",
+  "js/vt-core.min.js": "sha384-8G7JHw0n619J2sJDRsLtxImKbLv4bwwdS4phovlNvqanSqtBAEFOLLwwFfWDFFRs",
+  "js/vt-offline.min.js": "sha384-PHK5NIl5DkZozsGpqzlrX6X9x5oNvHz65ToYeFlRcMkkwG/F0vTV2FMUbVKgKENu"
+}
