@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="vti vti-in vti-loop" data-m="bounce" viewBox="0 0 24 24" width="96" height="96"><title>home</title><desc>VL Tech Official animated icon by Vijaya Kumar L (RisewithVJ). MIT.</desc><style>.vti{width:var(--vti-s,28px);height:var(--vti-s,28px);fill:none;stroke:#1f2a44;stroke-width:var(--vti-w,1.25);stroke-linecap:round;stroke-linejoin:round;overflow:visible;flex:none}
+.vti .a{stroke:#0363fc;transform-box:fill-box;transform-origin:center}
+.vti .d,.vti .a{stroke-dasharray:100 100;stroke-dashoffset:0}
+.vti-in .d,.vti-in .a{animation:vtiDraw .9s cubic-bezier(.65,0,.35,1) both}
+.vti-in .a{animation-delay:.25s}
+@keyframes vtiDraw{from{stroke-dashoffset:100}}
+.vti-loop .a,:hover>.vti .a,:focus-visible>.vti .a,.vti:hover .a{animation:var(--vti-m) 2.2s ease-in-out infinite}
+.vti[data-m=bounce]{--vti-m:vtiBounce}.vti[data-m=pulse]{--vti-m:vtiPulse}.vti[data-m=spin]{--vti-m:vtiSpin}
+.vti[data-m=wiggle]{--vti-m:vtiWiggle}.vti[data-m=float]{--vti-m:vtiFloat}.vti[data-m=grow]{--vti-m:vtiGrow}
+.vti[data-m=blink]{--vti-m:vtiBlink}.vti[data-m=twinkle]{--vti-m:vtiTwinkle}.vti[data-m=flash]{--vti-m:vtiFlash}
+.vti[data-m=swing]{--vti-m:vtiSwing}.vti[data-m=tick]{--vti-m:vtiTick}
+.vti[data-m=spin] .a{transform-origin:50% 50%}
+@keyframes vtiBounce{0%,100%{transform:translateY(0)}45%{transform:translateY(-2.5px)}65%{transform:translateY(.8px)}}
+@keyframes vtiPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.14)}}
+@keyframes vtiSpin{to{transform:rotate(360deg)}}
+@keyframes vtiWiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-9deg)}75%{transform:rotate(9deg)}}
+@keyframes vtiFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(1.5px,-1.5px)}}
+@keyframes vtiGrow{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.6)}}
+@keyframes vtiBlink{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes vtiTwinkle{0%,100%{transform:scale(1) rotate(0);opacity:1}50%{transform:scale(.7) rotate(20deg);opacity:.6}}
+@keyframes vtiFlash{0%,100%{opacity:1;filter:none}50%{opacity:.55}}
+@keyframes vtiSwing{0%,100%{transform:rotate(0)}30%{transform:rotate(12deg)}60%{transform:rotate(-8deg)}}
+@keyframes vtiTick{0%{stroke-dashoffset:100}30%,100%{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.vti .d,.vti .a{animation:none!important}}.vti{width:100%;height:100%}</style><path class="d" pathLength="100" d="M3 10.5 12 3l9 7.5"/><path class="d" pathLength="100" d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5"/><path class="a" pathLength="100" d="M10 21v-6h4v6"/></svg>

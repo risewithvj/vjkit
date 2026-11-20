@@ -1,0 +1,59 @@
+/*!
+ * VL Tech Official | Read-later bookmarks panel v2.0.0
+ * Designed and developed by Vijaya Kumar L (RisewithVJ) | https://vltechofficialblog.blogspot.com
+ * (c) 2026 Vijaya Kumar L (RisewithVJ). Original code. MIT licence: see LICENSE.
+ */
+
+/* Panel visibility */
+.isBkm,.cBkPs{display:block}
+.bD .bmPs,.pInf .pIc .bmPs{display:flex}
+.bmPs.a>svg .v{display:none}
+.bmPs.a>svg .d{display:block}
+
+/* Saved-count badge on the header button */
+.tBkmt::before{content:attr(data-text);position:absolute;top:-4px;right:0;z-index:2;min-width:18px;padding:1px 5px;border-radius:99px;background:var(--linkB,#0363fc);color:#fff;font-size:11px;font-weight:700;line-height:16px;text-align:center}
+.tBkmt.n::before{display:none}
+
+/* Drop-down panel */
+.wBkm{position:absolute;top:8px;right:0;z-index:4;display:flex;width:360px;max-height:420px;overflow:hidden;border:1px solid var(--vjLine,#dde4f0);border-radius:18px;background:var(--contentB,#fff);box-shadow:var(--vjShadow,0 12px 32px rgba(10,25,49,.12));opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease,visibility .2s}
+.Rtl .wBkm{right:auto;left:0}
+.drK .wBkm{background:var(--darkBs);border-color:rgba(255,255,255,.08)}
+.bkmI:checked~.wBkm{opacity:1;visibility:visible;transform:none}
+.bkmCls{position:fixed;inset:0;z-index:1;display:block;background:transparent;opacity:0;visibility:hidden;transition:opacity .2s}
+.bkmI:checked~.bkmCls{z-index:3;opacity:1;visibility:visible}
+.bkmH .c{display:none}
+
+/* Phones: bottom sheet */
+@media screen and (max-width:500px){
+ .wBkm,.Rtl .wBkm{position:fixed;top:auto;right:0;bottom:0;left:0;width:100%;max-height:calc(100% - var(--headerH,60px));border-radius:20px 20px 0 0;transform:translateY(100%)}
+ .bkmI:checked~.wBkm{transform:none}
+ .bkmI:checked~.bkmCls{background:rgba(10,25,49,.35);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+ .bkmH .c{display:flex}
+}
+
+/* Empty state */
+.bkmC>.n{text-align:center;animation:vtBkFade .4s ease both}
+.bkmC .n>svg{width:32px;height:32px;color:var(--linkB,#0363fc)}
+.drK .bkmC .n>svg{color:var(--darkU)}
+.bkmC .n>a{justify-content:center;min-width:100%;padding:8px 14px;font-size:14px}
+
+/* Saved items */
+.bkmC .item{position:relative;display:flex;align-items:center;gap:12px;width:100%}
+.bkmC .item+.item{margin-top:14px}
+.bkmC .pThmb{position:relative;flex:0 0 72px;margin:0;overflow:hidden;border-radius:12px;background:var(--vjTint,#e8f0fe)}
+.bkmC .pThmb>*{padding-top:100%}
+.bkmC .thmb{text-align:center}
+.bkmC .pThmb .bkmImg{position:absolute;inset:0;display:block;background:center/cover no-repeat;transition:transform .3s ease}
+.bkmC .pThmb:hover .bkmImg{transform:scale(1.05)}
+.bkmC .pThmb>::before{content:'No image';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:11px;opacity:.6}
+.bkmC a.thmb::before{color:var(--bodyC)}
+.drK .bkmC a.thmb::before{color:var(--darkT)}
+.bkmC .itmTtl{position:relative;width:calc(100% - 84px);padding:0}
+.bkmC .itmTtl>*{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;font-size:14px;line-height:1.5}
+.bkmC .item a:hover{color:var(--linkB,#0363fc)}
+.drK .bkmC .item a:hover{color:var(--darkU)}
+.del svg{cursor:pointer;transition:transform .2s ease,stroke .2s ease}
+.del:hover svg{stroke:#c0392b;transform:scale(1.1)}
+.bkmC .item.d{overflow:hidden;animation:vtBkOut .5s ease forwards}
+@keyframes vtBkFade{from{opacity:0;transform:translateY(4px)}}
+@keyframes vtBkOut{to{opacity:0;transform:translateX(40px)}}

@@ -1,0 +1,33 @@
+# VL Tech Official | short link service (go.trendit.in)
+# Designed and developed by Vijaya Kumar L (RisewithVJ)
+# No secrets in this file. Secrets (TURNSTILE_SECRET, ADMIN_TOKEN, SIGN_KEY) live in Cloudflare.
+name = "vl-shortlink"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+account_id = "a0e202cc4cc13faba3bf18b8b6c9412a"
+workers_dev = false
+
+routes = [
+  { pattern = "go.trendit.in", custom_domain = true }
+]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "vl-shortlinks"
+database_id = "5efe577f-6bce-4ed2-a4f7-624f9d61a281"
+migrations_dir = "migrations"
+
+[vars]
+SHORT_HOST = "go.trendit.in"
+BLOG = "https://vltechofficialblog.blogspot.com"
+SHORTENER_PAGE = "/p/free-url-shortener.html"
+TURNSTILE_SITEKEY = "0x4AAAAAAGKDy3VB40o0Bt8A"
+STEPS = "2"
+WAIT_MIN = "5"
+WAIT_MAX = "8"
+POW_BITS_GO = "16"
+POW_BITS_CREATE = "18"
+POW_PER_HOUR = "40"
+CREATE_POW_PER_HOUR = "5"
+CREATE_PER_HOUR = "15"
+CREATE_PER_DAY = "60"

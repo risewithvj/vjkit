@@ -1,0 +1,48 @@
+# VL Tech Official | deploy the go.trendit.in short link Worker on every push
+# Designed and developed by Vijaya Kumar L (RisewithVJ)
+# Needs two repository secrets: CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID (see workers/shortlink/README.md)
+name: Short link Worker
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'workers/shortlink/**'
+      - '.github/workflows/shortlink.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: shortlink-deploy
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check the Worker parses
+        run: node --check workers/shortlink/src/index.js
+      - name: Make sure no test switch reaches production
+        run: |
+          if grep -q 'DEV_MODE' workers/shortlink/wrangler.toml; then echo "DEV_MODE must never be set in wrangler.toml"; exit 1; fi
+      - name: Apply database changes and deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: workers/shortlink
+          wranglerVersion: '4'
+          command: |
+            d1 migrations apply vl-shortlinks --remote
+            deploy
+      - name: Check the live service
+        run: |
+          sleep 10
+          for i in 1 2 3 4 5 6; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' https://go.trendit.in/robots.txt || true)
+            if [ "$code" = "200" ]; then echo "go.trendit.in is live"; exit 0; fi
+            sleep 15
+          done
+          echo "::warning::go.trendit.in did not answer yet; DNS for a new custom domain can take a few minutes."

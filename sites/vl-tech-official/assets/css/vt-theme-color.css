@@ -1,0 +1,30 @@
+/*!
+ * VL Tech Official | Colour theme picker v2.0.0
+ * Designed and developed by Vijaya Kumar L (RisewithVJ) | https://vltechofficialblog.blogspot.com
+ * (c) 2026 Vijaya Kumar L (RisewithVJ). Original code. MIT licence: see LICENSE.
+ */
+
+.headR .headM .themeBtn{display:block}
+.cusW{position:fixed;right:16px;bottom:0;left:16px;z-index:21;display:block;border:1px solid var(--vjLine,#dde4f0);border-radius:18px;background:var(--contentB,#fff);box-shadow:var(--vjShadow,0 12px 32px rgba(10,25,49,.12));opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .2s ease,transform .2s ease,visibility .2s}
+.cusH{display:flex;align-items:center;justify-content:space-between;width:100%;padding:16px 18px 10px}
+.cusHi::after{content:attr(data-text);font-size:13px;opacity:.75}
+.cusCl{cursor:pointer}
+.cusCl::after{content:'\2715';font-size:14px}
+.cusP{width:100%;padding:0 16px 18px}
+.cusI:checked~.cusW{bottom:16px;opacity:1;visibility:visible;transform:none}
+.cusI:checked~.cusW+.fCls{z-index:19;background:rgba(10,25,49,.3);opacity:1;visibility:visible}
+@media screen and (min-width:501px){
+ .cusW{position:absolute;top:8px;right:0;bottom:auto;left:auto;width:280px}
+ .cusI:checked~.cusW{top:0;bottom:auto}
+ .Rtl .cusW{right:auto;left:0}
+ .cusI:checked~.cusW+.fCls{background:transparent}
+}
+.tPkr{position:relative;display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;margin:3px 4px;border:0;border-radius:50%;background:var(--pkrC);cursor:pointer;outline:0;transition:transform .2s ease}
+.tPkr::after{content:'';position:absolute;inset:-4px;border:2px solid var(--pkrC);border-radius:50%;opacity:0;transition:opacity .2s ease}
+.tPkr:hover{transform:scale(1.08)}
+.tPkr:hover::after{opacity:.6}
+.tPkr.thB0::before{content:'\2715';position:absolute;font-size:12px;line-height:1}
+.theme0 .thB0::after,.theme1 .thB1::after,.theme2 .thB2::after,.theme3 .thB3::after,.theme4 .thB4::after,.theme5 .thB5::after,.theme6 .thB6::after,.theme7 .thB7::after,.theme8 .thB8::after,.theme9 .thB9::after,.theme10 .thB10::after{opacity:1}
+.drK .cusW{background:var(--darkBs);border-color:rgba(255,255,255,.08)}
+.drK .tPkr.thB0{background:var(--darkBa)}
+.drK .tPkr.thB0::after{border-color:var(--darkBa)}
