@@ -1,0 +1,52 @@
+# VL Tech Official | rebuild the asset loader and refresh jsDelivr on every push
+# Designed and developed by Vijaya Kumar L (RisewithVJ)
+name: VL Tech Official loader
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sites/vl-tech-official/assets/**'
+      - '!sites/vl-tech-official/assets/vt-loader.js'
+      - '!sites/vl-tech-official/assets/sri.json'
+      - 'tools/vt-loader.template.js'
+      - 'tools/build-vt-loader.mjs'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: vt-loader
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check the JavaScript files parse
+        run: for f in sites/vl-tech-official/assets/js/*.js; do node --check "$f"; done
+      - name: Build loader pinned to this commit
+        run: node tools/build-vt-loader.mjs "$GITHUB_SHA"
+      - name: Commit loader as Vijaya Kumar L
+        run: |
+          git config user.name "Vijaya Kumar L"
+          git config user.email "risewithvj@gmail.com"
+          git add sites/vl-tech-official/assets/vt-loader.js sites/vl-tech-official/assets/sri.json
+          if git diff --cached --quiet; then echo "Loader unchanged"; exit 0; fi
+          git commit -m "build(vt): loader for ${GITHUB_SHA::7}"
+          git push
+      - name: Refresh jsDelivr cache
+        run: |
+          sleep 5
+          for i in 1 2 3 4 5; do
+            curl -fsS "https://purge.jsdelivr.net/gh/risewithvj/vjkit@main/sites/vl-tech-official/assets/vt-loader.js" && break
+            sleep 15
+          done
+      - name: Check the live loader
+        run: |
+          for i in 1 2 3 4 5 6; do
+            if curl -fsS "https://cdn.jsdelivr.net/gh/risewithvj/vjkit@main/sites/vl-tech-official/assets/vt-loader.js" | grep -q "${GITHUB_SHA}"; then echo "Live loader is pinned to ${GITHUB_SHA::7}"; exit 0; fi
+            sleep 20
+          done
+          echo "::warning::jsDelivr still shows an older loader; it refreshes within a few minutes."
