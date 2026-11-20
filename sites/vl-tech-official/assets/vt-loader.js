@@ -3,18 +3,18 @@
  * Designed and developed by Vijaya Kumar L (RisewithVJ)
  * https://vltechofficialblog.blogspot.com | https://github.com/risewithvj/vjkit
  * GENERATED FILE - do not edit. Edit tools/vt-loader.template.js; the GitHub Action rebuilds this on every push.
- * Build: 2026-11-20T20:49:22.439Z | Files pinned to commit 771a9fa229b78e0ef6b94bc5fb0fddf3d9cf16b4
+ * Build: 2026-11-20T20:52:18.177Z | Files pinned to commit 3e119080efa2185e60dd453db2c27ef9bb40f4bb
  */
 (function () {
   'use strict';
   if (window.vtLoader) return;
   // Two copies of the same pinned files: if the first CDN fails, the second is tried. Integrity hashes still apply.
   var BASES = [
-    'https://cdn.jsdelivr.net/gh/risewithvj/vjkit@771a9fa229b78e0ef6b94bc5fb0fddf3d9cf16b4/sites/vl-tech-official/assets',
-    'https://fastly.jsdelivr.net/gh/risewithvj/vjkit@771a9fa229b78e0ef6b94bc5fb0fddf3d9cf16b4/sites/vl-tech-official/assets'
+    'https://cdn.jsdelivr.net/gh/risewithvj/vjkit@3e119080efa2185e60dd453db2c27ef9bb40f4bb/sites/vl-tech-official/assets',
+    'https://fastly.jsdelivr.net/gh/risewithvj/vjkit@3e119080efa2185e60dd453db2c27ef9bb40f4bb/sites/vl-tech-official/assets'
   ];
   var SRI = {"js/vt-auto-chapters.js":"sha384-tDrgbIhEwzbRzQOF62GZnAEQg7SGqB7bPss9YpDwqkkgQ3/8uzSw7veiwP6fVDy+","js/vt-bookmarks.js":"sha384-OJvNoZEKE99n3aSofswyNQvQNc8YQNemvuPnAE5NFh6UDpYjSAkVsSbdMeuw81mk","js/vt-contact.js":"sha384-1nW5wMGbuIzx6kTjn/wvfwelTSminITAAApzJuh/WzKNvII/+msR9y6AVneKiEfE","js/vt-cookie-consent.js":"sha384-+yKCs5XKqukMd/dfeWEwRv23G0C9cz3lYrVlblZ1YkUd4b2WPabdjSGlLVwA0CkJ","js/vt-copy-pre.js":"sha384-GeBcN0SaadtpVwpyZ2Y7yYphz0RJGYts8Takm3KWg2ggLxw9f2DIZtdfwyjARADM","js/vt-core.js":"sha384-74fBP/JfCkMI0XHryeTDV3ve2Nq6wyTc+6p4bgP2nGAKvys3vbb/Qf7g/8+hOfH8","js/vt-golink.js":"sha384-pFnwvG3N75Odo4hwmjGWKK6wJlaMz0yB5AauMRUpnrINS+Odh2WJkK+LdDJTTyt8","js/vt-nav-icons.js":"sha384-bzfIRJXhJ/rB8m5wYG/vEAyqI6e82iYbzqU2qyfwK07cU804AGDxukbKAb+u3wtg","js/vt-offline.js":"sha384-BrgaLPe8pmMVgtACxAGGBC6sZDFPoRtg5+Qo77ZLEqbgwF5Vrj0GZRweIQlF6+e7","js/vt-topics.js":"sha384-PFSsGtLsTmkbUerJmuxz0pSgjguOO8ikW/KAhCSsZx/Mi+lQrE2fSyw5aNg+MroX","css/vt-bookmarks.css":"sha384-y7nA9nMf0RosIh47WryJmro5qby3ldCAArvG+H/ND2qJ57vv7XioNDxBLsAcPolR","css/vt-cookie-consent.css":"sha384-DKYR4F4Gjc9Np7m3/bayi/9Lb/2rvANXG1QBUz5XQZNyOeQwsWHPm2M+SbuvIYnB","css/vt-fonts.css":"sha384-I88XXgemYANVuXpOSl3MxTlp8jSRjAX884GOvsR+TffpirbpP2fxFFIqIU5P+9t9","css/vt-theme-color.css":"sha384-NUIcPJdz0n13l1g07HzDZwQJCJ0QHNcfxUqrs1JYxaEXKZOf5yod/vV6lZtz8Jml","css/vt-toc.css":"sha384-LnRggOg44FvL0ufFP7bifCEvA0Dx49Qrqu3HpcfcMJI/6Bm43tNDGqLQ1trNT4hj","css/vt-tools.css":"sha384-MX5PI1TewnL9cJ3LGPbeTjln6+RDRvIG172PSt2cuUtO5Q4zTG6UVwiZQM1ALUCp"};
-  window.vtLoader = { version: '1.5.0', commit: '771a9fa229b78e0ef6b94bc5fb0fddf3d9cf16b4', built: '2026-11-20T20:49:22.439Z' };
+  window.vtLoader = { version: '1.5.0', commit: '3e119080efa2185e60dd453db2c27ef9bb40f4bb', built: '2026-11-20T20:52:18.177Z' };
 
   function add(kind, path, id, done, n) {
     n = n || 0;
