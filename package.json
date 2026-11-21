@@ -1,0 +1,16 @@
+{
+  "name": "vjkit",
+  "version": "0.5.0",
+  "description": "VL Tech Official front-end assets by Vijaya Kumar L (RisewithVJ). All rights reserved.",
+  "license": "UNLICENSED",
+  "author": "Vijaya Kumar L (RisewithVJ) <https://www.linkedin.com/in/vijayakumarl/>",
+  "repository": { "type": "git", "url": "git+https://github.com/risewithvj/vjkit.git" },
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test",
+    "sri": "node tools/sri.mjs",
+    "dist": "node tools/build-dist.mjs"
+  },
+  "devDependencies": { "jsdom": "^24.0.0", "javascript-obfuscator": "^4.1.1", "terser": "^5.36.0" }
+}
