@@ -7,6 +7,7 @@
 ## Docs
 - [Home, live demos and all options](https://risewithvj.github.io/vjkit/)
 - [Licence](https://risewithvj.github.io/vjkit/licence/)
+- [Usage statistics](https://risewithvj.github.io/vjkit/stats/)
 - [File list (manifest)](https://cdn.jsdelivr.net/gh/risewithvj/vjkit@1/public/manifest.json)
 
 ## Modules (CSS + JS pairs under public/)
