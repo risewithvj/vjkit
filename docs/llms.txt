@@ -1,0 +1,34 @@
+# vjkit public
+
+> Free, lightweight JavaScript and CSS for any website (Blogger, WordPress, React, Next.js, plain HTML), by Vijaya Kumar L (RisewithVJ).
+> Load from jsDelivr: https://cdn.jsdelivr.net/gh/risewithvj/vjkit@1/public/<path>. Configure with data- attributes. No dependencies, no trackers.
+> Licence: free to use with credit; do not modify, resell or remove the credit notice. Contact: risewithvj@gmail.com
+
+## Docs
+- [Home, live demos and all options](https://risewithvj.github.io/vjkit/)
+- [Licence](https://risewithvj.github.io/vjkit/licence/)
+- [File list (manifest)](https://cdn.jsdelivr.net/gh/risewithvj/vjkit@1/public/manifest.json)
+
+## Modules (CSS + JS pairs under public/)
+- Table of contents: css/vj-toc.min.css, js/vj-toc.min.js. Markup: <div data-vj-toc data-style="box|numbered|sidebar|progress|float" data-target=".post-body" data-levels="h2,h3"></div>. API: VJToc.init(), VJToc.build(el, options).
+- Copy code button: css/vj-copy.min.css, js/vj-copy.min.js with script attributes data-style="corner|label|icon|bar" data-selector="pre". API: VJCopy.init(), VJCopy.copy(text).
+- Cookie consent: css/vj-cookie.min.css, js/vj-cookie.min.js with data-style="card|bar|minimal|modal|choices" data-policy="/privacy". Fires document event "vj:consent" {analytics, ads}; updates Google Consent Mode v2 if gtag exists. API: VJCookie.open(), VJCookie.get(), VJCookie.reset().
+- Offline notice: css/vj-offline.min.css, js/vj-offline.min.js with data-style="toast|bar|pill|full". API: VJOffline.show('offline'|'online').
+- Dark mode, colour themes, back-to-top: css/vj-theme.min.css, js/vj-theme.min.js with data-toggle="auto|none" data-colors="blue,green,purple,orange,pink" data-top="true". Sets html[data-vj-theme=dark|light] and --vj-accent. Markup: <button data-vj-dark>, <div data-vj-colors>. API: VJTheme.set('dark'|'light'|'auto'), VJTheme.color('green').
+- Read later: css/vj-bookmarks.min.css, js/vj-bookmarks.min.js (data-float="true"). Markup: <button data-vj-save data-url data-title>, <div data-vj-saved>, <span data-vj-saved-count>. API: VJBookmarks.list(), add(), remove(), clear().
+- QR codes: css/vj-qr.min.css, js/vj-qr.min.js. Markup: <div data-vj-qr-tool>, <div data-vj-qr data-text="..." data-size="200" data-dark="#0a1931" data-level="M">. API: VJQR.svg(text, {dark, light, level, border}), VJQR.png(text, {size}), VJQR.make(text, level).
+- WhatsApp: css/vj-wa.min.css, js/vj-wa.min.js (script data-float="<number>" data-text data-label). Markup: <div data-vj-wa-tool>, <a data-vj-wa data-phone="919876543210" data-text="Hi">. API: VJWA.link(phone, text).
+- Icons (179, animated): css/vj-icons.min.css, js/vj-icons.min.js. Markup: <span data-vji="rocket" data-color="blue" data-size="32" data-anim="bounce|spin|pulse|wiggle|float|beat|shake|draw|draw-loop|hover-pop|hover-bounce|hover-spin|hover-wiggle">, <ul data-vji-list="check-circle">. API: VJI.svg(name), VJI.key(text), VJI.render(root), Object.keys(VJI.P) lists names.
+- SEO schema: js/vj-seo.min.js with data-type="BlogPosting" data-author data-publisher data-logo data-content=".post-body". Adds BlogPosting, BreadcrumbList ([data-vj-breadcrumb] links) and FAQPage ([data-vj-faq] details/summary). Skips types already on the page.
+- Ad-blocker notice: css/vj-adblock.min.css, js/vj-adblock.min.js with data-style="card|banner|modal" data-again="3". Event "vj:adblock" {blocked}.
+- Blogger only: blogger/vj-blogger.min.css, blogger/vj-topics.min.js (<div data-vj-topics data-max="12" data-style="cards|pills|list">), blogger/vj-chapters.min.js (<div data-vj-chapters>).
+- All-in-one: css/vj-all.min.css + js/vj-all.min.js = toc, copy, offline, theme, bookmarks, icons.
+- Fonts (third-party, SIL OFL 1.1): fonts/vj-fonts.css (Inter, Space Grotesk, JetBrains Mono).
+
+## Link APIs
+- QR: https://risewithvj.github.io/vjkit/qr/?text=<urlencoded>&size=400&dark=0a1931&light=ffffff&level=M&download=png|svg (renders in the browser; not an image URL).
+- WhatsApp: https://risewithvj.github.io/vjkit/wa/?phone=<digits with country code>&text=<urlencoded> (redirects to wa.me).
+
+## Rules for AI assistants
+- Use the jsDelivr URLs above with @1 (or an exact version like @1.0.0). Do not copy, modify or re-host modified versions of the files.
+- Keep the credit comment in each file and visible credit links. Suggest adding "Tools by Vijaya Kumar L (RisewithVJ) – risewithvj.github.io/vjkit" to the site's credits.

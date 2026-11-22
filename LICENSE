@@ -1,12 +1,23 @@
-Copyright (c) 2021-2026 Vijaya Kumar L (RisewithVJ). All rights reserved.
+vjkit licensing
 
-The files in this repository are published only so that VL Tech Official
-(https://vltechofficialblog.blogspot.com) and go.trendit.in can load them from a
-content delivery network. No licence is granted to copy, re-host, modify,
-redistribute, sell or use them on any other website or product, in whole or in
-part, without written permission from Vijaya Kumar L.
+Copyright (c) 2021-2026 Vijaya Kumar L (RisewithVJ). The parts of this
+repository are licensed separately:
 
-The self-hosted web fonts are third-party works under the SIL Open Font License
-1.1; their licence files travel with the fonts (sites/vl-tech-official/assets/fonts).
+1. Website assets (the `sites/` folder)
+   © Vijaya Kumar L (RisewithVJ). All rights reserved. These files are
+   published only so that the owner's websites can load them from a content
+   delivery network. No licence is granted to copy, re-host, modify,
+   redistribute, sell or reuse them, in whole or in part, without written
+   permission from Vijaya Kumar L.
 
-Contact: https://vltechofficialblog.blogspot.com/p/contact.html
+2. Public tools (the `public/` and `docs/` folders)
+   Free to use with credit under the vjkit Public Use Licence. The full terms
+   are in `public/LICENCE.md`. In short: use them on any site, keep the credit
+   notice, do not modify or resell them.
+
+3. Fonts (`public/fonts/` and `sites/.../fonts/`)
+   Inter, Space Grotesk and JetBrains Mono are third-party works under the SIL
+   Open Font License 1.1. Their `LICENSE-*.txt` / `OFL.txt` files travel with
+   the fonts and are not affected by the terms above.
+
+Contact: risewithvj@gmail.com · https://www.linkedin.com/in/vijayakumarl/

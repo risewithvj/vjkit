@@ -1,0 +1,40 @@
+/* vjkit public docs styles. (c) 2026 Vijaya Kumar L (RisewithVJ) */
+:root{--vj-font:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;--ink:#0f172a;--bg:#f7f8fc}
+html[data-vj-theme=dark]{--ink:#e5e7eb;--bg:#0b1120}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.65 var(--vj-font);color:var(--ink);background:var(--bg)}
+a{color:var(--vj-accent)}pre,code{font-variant-ligatures:none}code{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.88em;background:var(--vj-soft);padding:2px 6px;border-radius:6px;word-break:break-word}
+pre{background:#0f172a;color:#e2e8f0;padding:16px;border-radius:12px;overflow:auto;font-size:13px;line-height:1.6;margin:0}pre code{background:none;padding:0;color:inherit}
+.top{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:18px;padding:10px 24px;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--vj-line)}
+.brand{display:flex;align-items:center;gap:8px;font:700 19px/1 'Space Grotesk',var(--vj-font);color:var(--ink);text-decoration:none}.brand small{font:600 11px/1 var(--vj-font);color:var(--vj-muted);text-transform:uppercase;letter-spacing:.08em}
+.logo{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--vj-accent);color:#fff;font-size:15px}
+.top nav{display:flex;gap:16px;margin-left:auto;flex-wrap:wrap}.top nav a{color:var(--ink);text-decoration:none;font-size:14.5px;font-weight:500}.top nav a:hover{color:var(--vj-accent)}
+@media (max-width:760px){.top nav{display:none}.top .vj-btn{margin-left:auto}}
+.hero{max-width:920px;margin:0 auto;padding:72px 24px 40px;text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:var(--vj-accent);background:var(--vj-bg);border:1px solid var(--vj-line);padding:6px 14px;border-radius:99px;margin:0}
+.hero h1{font:700 clamp(32px,5.5vw,56px)/1.1 'Space Grotesk',var(--vj-font);margin:20px 0 16px;letter-spacing:-.02em}.hl{color:var(--vj-accent)}
+.lead{font-size:18px;color:var(--vj-muted);max-width:720px;margin:0 auto}.cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:28px 0 12px}.cta .vj-btn{height:46px;padding:0 22px;font-size:15px}
+.by{font-size:14px;color:var(--vj-muted)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px 60px}.sec{font:700 28px/1.2 'Space Grotesk',var(--vj-font);margin:30px 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-bottom:40px}
+.card{display:flex;flex-direction:column;gap:8px;padding:18px;border:1px solid var(--vj-line);border-radius:16px;background:var(--vj-bg);color:var(--ink);text-decoration:none;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--vj-shadow)}.card .ci{width:40px;height:40px;padding:9px;border-radius:12px;background:color-mix(in srgb,var(--vj-accent) 12%,transparent);color:var(--vj-accent)}
+.card b{font-size:16px}.card small{color:var(--vj-muted);font-size:13.5px;line-height:1.5}.card em{font-style:normal;font-size:12px;font-weight:700;color:var(--vj-accent);margin-top:auto}
+.block{background:var(--vj-bg);border:1px solid var(--vj-line);border-radius:18px;padding:24px;margin:0 0 22px}
+.block h2{display:flex;align-items:center;gap:10px;font:700 23px/1.25 'Space Grotesk',var(--vj-font);margin:0 0 8px}.block>p{color:var(--vj-muted);margin:0 0 14px}
+.styles,.tabbar{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.styles button,.tabbar button{height:34px;padding:0 14px;border-radius:99px;border:1px solid var(--vj-line);background:var(--vj-bg);color:var(--ink);font:600 13px/1 var(--vj-font);cursor:pointer;text-transform:capitalize}
+.styles button[aria-selected=true],.tabbar button[aria-selected=true]{background:var(--vj-accent);border-color:var(--vj-accent);color:#fff}
+.demo{border:1px dashed var(--vj-line);border-radius:14px;padding:18px;margin-bottom:14px;background:var(--bg)}
+.demo-cols{display:grid;grid-template-columns:280px 1fr;gap:20px}@media (max-width:760px){.demo-cols{grid-template-columns:1fr}}
+.demo-post{max-height:340px;overflow:auto;font-size:14.5px}.demo-post h2,.demo-post h3{margin:14px 0 6px;font-size:17px}.demo-post h3{font-size:15px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.muted{color:var(--vj-muted);font-size:14px}
+.code{position:relative}.code .cp{position:absolute;top:10px;right:10px;height:32px;background:#1e293b;color:#e2e8f0;border-color:#334155}
+.opts{width:100%;border-collapse:collapse;margin-top:16px;font-size:14px}.opts th,.opts td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--vj-line);vertical-align:top}.opts th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--vj-muted)}
+.opts td:first-child{width:34%}
+.icons{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;max-height:420px;overflow:auto;margin-top:10px}
+.icons button{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 4px;border:1px solid var(--vj-line);border-radius:10px;background:var(--vj-bg);color:var(--ink);cursor:pointer;font:inherit}.icons button:hover{color:var(--vj-accent);border-color:var(--vj-accent)}
+.icons button.ok{background:#059669;color:#fff}.icons .vjic{width:24px;height:24px}.icons small{font:600 11px/1.2 'JetBrains Mono',monospace;word-break:break-all}
+.search{width:100%;height:42px;padding:0 14px;border:1px solid var(--vj-line);border-radius:10px;background:var(--vj-bg);color:var(--ink);font:inherit}
+.anims{display:flex;flex-wrap:wrap;gap:18px;margin-top:16px}.anims>span{display:flex;flex-direction:column;align-items:center;gap:6px}.anims small{font-size:12px;color:var(--vj-muted)}
+.api{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}.api>div{border:1px solid var(--vj-line);border-radius:14px;padding:16px}.api h3{display:flex;align-items:center;gap:8px;margin:0 0 10px}.api code{display:block;padding:10px;margin-bottom:8px}.api p{font-size:14px;color:var(--vj-muted)}
+.foot{text-align:center;padding:30px 20px 90px;color:var(--vj-muted);font-size:14px;border-top:1px solid var(--vj-line)}

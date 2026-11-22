@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WhatsApp without saving the number + chat link API | RisewithVJ</title>
+<meta name="description" content="Open a WhatsApp chat with any number without saving it. Or use the link: /vjkit/wa/?phone=919876543210&text=Hi">
+<link rel="canonical" href="https://risewithvj.github.io/vjkit/wa/">
+<link rel="stylesheet" href="../lib/fonts/vj-fonts.css"><link rel="stylesheet" href="../lib/css/vj-wa.min.css"><link rel="stylesheet" href="../site.css">
+<script>
+(function(){var p=new URLSearchParams(location.search),n=(p.get('phone')||'').replace(/\D/g,'').replace(/^0+/,''),t=p.get('text')||'';
+ if(n.length>=8&&n.length<=15){var u='https://wa.me/'+n+(t?'?text='+encodeURIComponent(t):'');window.__vjWaGo=u;location.replace(u);}})();
+</script>
+<style>.one{max-width:760px;margin:0 auto;padding:40px 20px}</style>
+</head><body>
+<header class="top"><a class="brand" href="../"><span class="logo">vj</span>vjkit <small>public</small></a><nav><a href="../#wa">Docs</a><a href="../qr/">QR tool</a><a href="../licence/">Licence</a></nav></header>
+<main class="one"><div id="go" hidden><h1>Opening WhatsApp…</h1><p><a class="vj-btn" id="golink" href="#">Tap here if it doesn't open</a></p></div>
+<div id="tool"><h1 style="font:700 34px/1.2 Space Grotesk,sans-serif;margin:0 0 6px">Message on WhatsApp without saving the number</h1><p class="muted" style="margin:0 0 18px">Pick the country, type the number and an optional message. Nothing is stored: the chat opens in WhatsApp directly.</p><div data-vj-wa-tool></div></div>
+<section class="block" style="margin-top:28px"><h2>Use it as a link (WhatsApp API)</h2>
+<pre><code>https://risewithvj.github.io/vjkit/wa/?phone=919876543210&amp;text=Hi%20there</code></pre>
+<p class="muted">phone = number with country code, digits only · text = optional message (URL-encoded). The page sends the visitor straight to WhatsApp.</p></section></main>
+<footer class="foot">Free WhatsApp tool by Vijaya Kumar L (RisewithVJ) · <a href="../">vjkit public</a> · <a href="../licence/">Licence</a></footer>
+<script src="../lib/js/vj-qr.min.js"></script><script src="../lib/js/vj-wa.min.js"></script>
+<script>if(window.__vjWaGo){document.getElementById('tool').hidden=true;var g=document.getElementById('go');g.hidden=false;document.getElementById('golink').href=window.__vjWaGo;}</script>
+</body></html>

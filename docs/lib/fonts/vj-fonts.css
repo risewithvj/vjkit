@@ -1,0 +1,6 @@
+/* Fonts are NOT made by RisewithVJ. Inter (Rasmus Andersson), Space Grotesk (Florian Karsten) and JetBrains Mono (JetBrains)
+ * are used under the SIL Open Font License 1.1. Their licence files are in this folder. Hosted here unchanged for convenience. */
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(inter-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url(inter-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url(jetbrains-mono-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(space-grotesk-latin-700-normal.woff2) format('woff2')}

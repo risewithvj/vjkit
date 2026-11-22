@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free QR code generator and QR link API | RisewithVJ</title>
+<meta name="description" content="Make a QR code for any link or text, Wi-Fi, email, phone, SMS or WhatsApp. Download PNG or SVG. Or use the link API: /vjkit/qr/?text=...">
+<link rel="canonical" href="https://risewithvj.github.io/vjkit/qr/">
+<link rel="stylesheet" href="../lib/fonts/vj-fonts.css"><link rel="stylesheet" href="../lib/css/vj-qr.min.css"><link rel="stylesheet" href="../site.css">
+<style>.one{max-width:880px;margin:0 auto;padding:40px 20px}.big{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}.big svg{width:min(var(--s,320px),90vw);height:auto;border-radius:12px;box-shadow:var(--vj-shadow)}.big p{word-break:break-all;color:var(--vj-muted);font-size:14px;max-width:600px}</style>
+</head><body>
+<header class="top"><a class="brand" href="../"><span class="logo">vj</span>vjkit <small>public</small></a><nav><a href="../#qr">Docs</a><a href="../wa/">WhatsApp tool</a><a href="../licence/">Licence</a></nav></header>
+<main class="one"><div id="app"></div>
+<section class="block" style="margin-top:28px"><h2>Use it as a link (QR API)</h2><p>Make a QR from any app, email or button by building a link:</p>
+<pre><code>https://risewithvj.github.io/vjkit/qr/?text=YOUR_TEXT&amp;size=400&amp;dark=0a1931&amp;light=ffffff&amp;level=M&amp;download=png</code></pre>
+<p class="muted">text = the link or text (URL-encoded) · size 100–2000 · dark/light = hex colours without # · level L/M/Q/H · download=png or svg (optional).</p></section></main>
+<footer class="foot">Free QR tool by Vijaya Kumar L (RisewithVJ) · <a href="../">vjkit public</a> · <a href="../licence/">Licence</a></footer>
+<script src="../lib/js/vj-qr.min.js"></script>
+<script>
+(function(){
+  var p=new URLSearchParams(location.search),t=p.get('text')||p.get('data')||p.get('url'),app=document.getElementById('app');
+  if(!t){app.innerHTML='<h1 style="font:700 34px/1.2 Space Grotesk,sans-serif;margin:0 0 6px">Free QR code generator</h1><p class="muted" style="margin:0 0 18px">Links, Wi-Fi, email, phone, SMS and WhatsApp. Nothing you type leaves your browser.</p><div data-vj-qr-tool></div>';VJQR.init();return;}
+  var size=Math.min(2000,Math.max(100,parseInt(p.get('size')||'320',10))),o={dark:p.get('dark')||'0a1931',light:p.get('light')||'ffffff',level:(p.get('level')||'M').toUpperCase()};
+  try{var svg=VJQR.svg(t,o);}catch(e){app.innerHTML='<p>'+e.message+'</p>';return;}
+  var safe=t.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]});
+  app.innerHTML='<div class="big" style="--s:'+size+'px">'+svg+'<p>'+safe+'</p><div class="row"><button class="vj-btn" id="png">Download PNG</button><button class="vj-btn vj-ghost" id="svg">Download SVG</button><a class="vj-btn vj-ghost" href="./">Make another</a></div></div>';
+  var dl=function(k){if(k==='svg')VJQR.download('qr-code.svg','data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg));else VJQR.download('qr-code.png',VJQR.png(t,{size:size,dark:o.dark,light:o.light,level:o.level}));};
+  document.getElementById('png').onclick=function(){dl('png')};document.getElementById('svg').onclick=function(){dl('svg')};
+  if(p.get('download'))setTimeout(function(){dl(p.get('download'))},300);
+  document.title='QR code: '+t.slice(0,60);
+})();
+</script></body></html>
