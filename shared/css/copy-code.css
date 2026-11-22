@@ -1,6 +1,0 @@
-/*! VJKit copy-code v0.1.0 | (c) 2021-2026 Vijaya Kumar L (RisewithVJ). All rights reserved. */
-.vj-copy-host{position:relative}
-.vj-copy{position:absolute;top:8px;right:8px;cursor:pointer;border:1px solid var(--vj-border,#cbd5e1);border-radius:8px;
-  padding:4px 10px;background:var(--vj-bg,#fff);color:var(--vj-fg,#0a1931);font:600 12px/1.4 system-ui,sans-serif;opacity:.85}
-.vj-copy:hover,.vj-copy:focus-visible{opacity:1;border-color:var(--vj-accent,#0363fc)}
-.vj-copy:focus-visible{outline:3px solid rgba(3,99,252,.4);outline-offset:2px}
