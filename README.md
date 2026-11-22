@@ -31,7 +31,7 @@ Blogger topic/chapter helpers.
 <script defer src="https://cdn.jsdelivr.net/gh/risewithvj/vjkit@1/public/js/vj-toc.min.js"></script>
 ```
 
-`@1` always gives the newest 1.x release. Use an exact version such as `@1.0.0` to freeze it.
+`@1` always gives the newest 1.x release. Use an exact version such as `@1.2.0` to freeze it.
 
 ## Licence
 

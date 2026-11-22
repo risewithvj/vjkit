@@ -12,7 +12,7 @@ Designed and developed by **Vijaya Kumar L (RisewithVJ)**.
 <script defer src="https://cdn.jsdelivr.net/gh/risewithvj/vjkit@1/public/js/vj-toc.min.js"></script>
 ```
 
-`@1` always gives the newest 1.x release (safe updates). Use an exact version such as `@1.0.0` to freeze it.
+`@1` always gives the newest 1.x release (safe updates). Use an exact version such as `@1.2.0` to freeze it.
 
 ## What is included
 
